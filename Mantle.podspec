@@ -32,12 +32,17 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Mantle/Mantle.git"}
 
 
-s.source_files = 'Mantle/*.{h,m}','Mantle/extobjc/*.{h,m}'
+s.source_files = 'Mantle/*.{h,m}'
   
   #s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = 'Mantle/*.h','Mantle/extobjc/*.h'
+  s.public_header_files = 'Mantle/*.h'
 
+
+  s.subspec 'extobjc' do |extobjc|
+      extobjc.source_files = 'Mantle/extobjc/*.{h,m}'
+      extobjc.public_header_files = 'Mantle/extobjc/*.h'
+  end
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
