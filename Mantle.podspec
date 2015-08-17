@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
 
 
-  s.license  = { :type => 'GNU',
+  s.license  = { :type => 'MIT',
                  :text => 'Copyright (C) 1989, 1991 Free Software Foundation, Inc.' }
 
   s.author             = "alikaragoz"
